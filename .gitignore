@@ -1,3 +1,6 @@
 
 # Ignore the virtual environment created for pyhton
 venv/
+
+# Ignore the pictures for the README.md
+pictures/

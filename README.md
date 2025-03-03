@@ -1,7 +1,5 @@
 # End-to-end-encryption chat 
 
-# AES Encryption & Decryption in Python
-
 ## Overview
 This project demonstrates how to encrypt and decrypt messages using the **AES (Advanced Encryption Standard)** algorithm in **CBC (Cipher Block Chaining) mode** with a **16-byte secret key**.
 
@@ -51,18 +49,7 @@ def decrypt_message(encrypted_msg):
     return cipher.decrypt(data[16:]).rstrip()  # Remove padding spaces
 ```
 
-## Example Usage
-```python
-# Encrypt a message
-encrypted = encrypt_message("Hello, World!")
-print(encrypted)  # Outputs: Encrypted Base64 string
-
-# Decrypt the message
-decrypted = decrypt_message(encrypted)
-print(decrypted.decode())  # Outputs: "Hello, World!"
-```
-
-## Security Notes
+## Notes
 - **Never hardcode the secret key** in real applications.
 - Consider using **PKCS7 padding** instead of spaces for better security.
 
@@ -71,3 +58,9 @@ Install dependencies using:
 ```sh
 pip install pycryptodome
 ```
+
+## Overview of User Interface
+The user graphical user interface was done with tkinter which is already integrated with python. The user interface is shown underneath, 
+it features a text box to enter the messages, a display box to show the messages sent and received and a status message to show the status of the connection or any errors that may occur.
+
+![GUI](pictures/overview_gui.png)
